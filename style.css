@@ -1,0 +1,75 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bounce {
+    position: relative;
+    color: black;
+    bottom: -5vh;
+}
+h1 b {
+    font-weight: 100;
+}
+.bounce h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    white-space: nowrap;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    font-size: 40vw;
+    text-align: center;
+    transform:translateX(0%);
+    animation: bounce 10s linear infinite alternate;
+}
+@keyframes bounce {
+    0%   {
+        transform: translateX(10vw);
+    }
+    100% {
+        transform: translateX(-250vw);
+    }
+}
+
+section.about {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50vw;
+    margin-top: 20vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    font-size: 0.9em;
+    line-height: 0em;
+    font-weight: 900;
+}
+h3 {
+    line-height: 1em;
+    font-size: 1.1em;
+    margin-bottom: 2.4em;
+    font-weight: 200;
+}
+p.caption {
+    font-size: 0.7em;
+    font-weight: normal;
+}
+p.overline {
+    font-size: 0.7em;
+    font-weight: 900;
+}
+
+a, a:visited, a:active {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+a:hover, a:link {
+    color: darkcyan;
+}

@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+            Fergus Buchanan
+        </title>
+
+        <link rel="icon" href="titleIcon" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body onload="init()">
+        <section class="about">
+            <h2>FERGUS BUCHANAN</h2>
+            <h3>Computer Science, Student at <a href="https://www.st-andrews.ac.uk">University of St Andrews</a></h3>
+
+            <p class="caption">Currently based in Glasgow, Earth</p>
+            <p id="earth_time" class="overline">55.8652&deg; N, -4.2576&deg; E</p>
+        </section>
+
+        <div class="bounce">
+            <h1>
+                Fergus <b>Buchanan</b>
+            </h1>
+        </div>
+
+        <script>
+            function daysSinceBirth() {
+                let today = new Date();
+                let dob = new Date(2001, 11 - 1, 5 + 1);
+
+                return Math.ceil((today - dob) / 86400000);
+            }
+
+            function init() {
+                document.getElementById('earth_time').innerHTML = "Day #" + daysSinceBirth();
+            }
+        </script>
+    </body>
+</html>
