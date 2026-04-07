@@ -1,0 +1,210 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: auto;
+    font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    color: #36454F;
+    background-color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.menu, .menu a {
+    padding: 25px;
+}
+
+.menu a {
+    float: right;
+    display: block;
+    text-align: center;
+}
+
+.menu img {
+    float: left;
+}
+
+a {
+    text-decoration: none;
+}
+
+a.previewLink {
+    font-weight: normal;
+}
+
+a.previewLink:hover {
+    color: #FDD835;
+}
+
+a:hover, a.previewLink {
+    color: #FFB300;
+}
+
+h1, p, a {
+    color: #F57C00;
+}
+
+h1, h2, p, a, ul {
+    line-height: 1.5;
+}
+
+h1, a {
+    font-weight: bold;
+}
+
+h1, h2 {
+    letter-spacing: -0.015em;
+}
+
+.about h1 {
+    margin-top: 5vh;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: clamp(1.1rem, 1rem + 0.45vw, 1.4rem);
+    margin: 0.2rem 0 1.25rem;
+}
+
+p, h2, ul {
+    color: #36454F;
+}
+
+p, li {
+    font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+}
+
+p {
+    max-width: 72ch;
+    margin: 0 0 1.25rem;
+}
+
+ul {
+    max-width: 72ch;
+    padding-left: 1.35rem;
+}
+
+p.subText {
+    font-size: clamp(0.875rem, 0.82rem + 0.2vw, 1rem);
+    font-weight: normal;
+    letter-spacing: 0.01em;
+    color: #5B6770;
+}
+
+.about, .previewInnerContainer {
+    width: 60vw;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30vh;
+    position: relative;
+    top: 25vh;
+}
+
+.hide, .hide-inline {
+    display:none
+}
+
+p.subText {
+    padding-bottom: 30vh;
+}
+
+.announcement-container {
+    background-image: url("banner.jpeg");
+    background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.priorityText {
+    padding-bottom: 12.5vh;
+    font-size: clamp(2rem, 1.2rem + 3vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.upcoming {
+    font-size: clamp(1.1rem, 0.9rem + 1vw, 1.5rem);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.priorityText, .upcoming {
+    white-space: nowrap;
+    position: absolute;
+    color: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bounce {
+    position: relative;
+}
+
+.bounce h1 {
+    top: 80vh;
+    color: #fff;
+    font-weight: 900;
+    white-space: nowrap;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-size: 25vw;
+    text-align: center;
+    transform: translateY(-25vh);
+    animation: bounce 5s linear 1 alternate;
+}
+
+@keyframes bounce {
+    0%   {
+        transform: translateY(25vh);
+    }
+    100% {
+        transform: translateY(-25vh);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+  .about, .previewInnerContainer {
+	  width: 75vw;
+  }
+  .menu a {
+      font-size: 0.95rem;
+      letter-spacing: 0.01em;
+  }
+}
+
+.about h1 {
+    font-size: clamp(2rem, 1.4rem + 2.5vw, 3rem);
+    line-height: 1.1;
+    margin-bottom: 0.25rem;
+}
+
+.menu a {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+.about p:first-of-type {
+    font-size: clamp(1.05rem, 1rem + 0.35vw, 1.2rem);
+    color: #2F3B43;
+}
+
+@media screen and (max-width: 640px) {
+  .about, .previewInnerContainer {
+      width: 88vw;
+  }
+  h1, h2, p, a, ul {
+      line-height: 1.45;
+  }
+}

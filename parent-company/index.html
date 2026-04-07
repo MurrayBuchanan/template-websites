@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Placeholder Company</title>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" href="titleIcon.ico" type="image/x-icon">
+    </head>
+
+    <body>
+        <div class="menu">
+            <a href="#">More Links</a>
+            <img src="logo.png" alt="Company Logo" width="50vw" height="50vh">
+        </div>
+
+        <div class="about">
+            <br>
+            <h1>Placeholder Company</h1>
+            <h2>Parent Brand</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Use this area for a short overview of your business, services, and audience. <span class="hide-inline">Add a second sentence here that explains your long-term direction and what makes your team different.</span><a class="read-more" href="#">more</a></p>
+
+            <div class="hide">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Mauris at turpis vitae leo posuere tristique at in nulla.</p>
+
+                <p>Praesent non eros sit amet quam aliquet lacinia. Donec euismod, nisi id accumsan feugiat, lacus nisl dictum sem, vel posuere magna urna non nisi.</p>
+
+                <p>Integer bibendum, erat quis interdum sodales, justo lacus faucibus arcu, id volutpat tortor odio in augue. Curabitur auctor sem vel orci aliquet congue.</p>
+
+                <p>Ut porta, odio at ultrices consequat, nulla elit scelerisque tortor, sit amet congue neque lorem id arcu. Duis tristique finibus vestibulum.</p>
+
+                <p>Morbi feugiat tempor est, vel interdum odio malesuada sed. Sed id risus et lectus molestie iaculis a in sem.</p>
+
+                <p>Aliquam erat volutpat. Suspendisse mattis aliquet tristique. Proin lacinia massa non velit luctus, quis ullamcorper purus tempor.</p>
+
+                <ul>
+                    <li>Placeholder point one for company goals.</li>
+                    <li>Placeholder point two for long-term vision.</li>
+                    <li>Placeholder point three for team values.</li>
+                    <li>Placeholder point four for product direction.</li>
+                    <li>Placeholder point five for customer impact.</li>
+                    <li>Placeholder point six for growth priorities.</li>
+                </ul>
+
+                <p>Add closing placeholder text here to summarize your company story and next steps for visitors.</p>
+            </div>
+
+            <p class="subText">Based on GitHub, Earth</p>
+        </div>
+    </body>
+
+    <script>
+        function getHeight(resize){
+            var resize_style=window.getComputedStyle(resize),resize_display=resize_style.display,max_height=resize_style.maxHeight.replace("px","").replace("%",""),requested_height=0;
+            if(resize_display!=="none"&&max_height!=="0")
+                return resize.offsetHeight;resize.style.display="block";requested_height=resize.offsetHeight;resize.style.display=resize_display;return requested_height
+            }
+        function toggleSlide(resize){
+            var max_height=0;
+            if(resize.getAttribute("data-max-height"))
+            if(resize.style.maxHeight.replace("px","").replace("%","")==="0")resize.style.maxHeight=resize.getAttribute("data-max-height");
+            else resize.style.maxHeight="0";
+            else{
+                max_height=getHeight(resize)+"px";resize.style["transition"]="max-height 0.75s ease-in-out";resize.style.overflowY="hidden";resize.style.maxHeight="0";resize.setAttribute("data-max-height",max_height);resize.style.display="block";
+                setTimeout(function(){resize.style.maxHeight=max_height},10);
+                setTimeout(function(){document.querySelector(".hide").style["transition"]="all 0s 0s ease";document.querySelector(".hide").style["max-height"]="none"},700)}
+            }
+            if(window.addEventListener)document.querySelector(".read-more").addEventListener("click",function(e){this.style.display="none";document.querySelector(".hide-inline").style.display="inline";toggleSlide(document.querySelector(".hide"));e.preventDefault();return false},false);
+    </script>
+</html>
