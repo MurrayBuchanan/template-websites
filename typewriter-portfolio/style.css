@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;700&display=swap');
+
+:root {
+    --paper: #e8e2d4;
+    --ink: #1a2229;
+    --ink-muted: #5a564d;
+    --ink-strike: #0c1014;
+    --ink-faint: #7a746a;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Inconsolata', monospace;
+}
+
+body {
+    background-color: var(--paper);
+}
+
+section.about {
+    width: 50vw;
+    max-height: calc(100vh - 20vh);
+    margin-top: 20vh;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+h1 {
+    white-space: nowrap;
+    margin: 0;
+    font-size: 1.5em;
+    line-height: 1.5;
+    font-weight: 700;
+    color: var(--ink);
+}
+
+p {
+    display: inline;
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.5;
+    color: var(--ink-muted);
+}
+
+p.caption {
+    font-size: 0.75em;
+    font-weight: normal;
+    color: var(--ink-faint);
+    margin-top: 0.5em;
+}
+
+ul {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.5;
+    color: var(--ink-muted);
+}
+
+h1, p, a, ul {
+    display: inline-block;
+}
+
+section.about .hide,
+section.about .hideInline {
+    display: none;
+}
+
+a.readMore {
+    margin-right: 1em;
+}
+
+a,
+a:visited,
+a:active {
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-image:
+        linear-gradient(90deg, var(--ink-strike) 0 100%),
+        linear-gradient(90deg, var(--ink-muted) 0 100%);
+    background-size: 0% 100%, 100% 100%;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    a {
+        transition: background-size 0.6s steps(14, end);
+    }
+
+    a:hover {
+        background-size: 100% 100%, 100% 100%;
+    }
+}
+
+a:focus-visible {
+    background-size: 100% 100%, 100% 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    a {
+        transition: none;
+    }
+}
+
+@media (max-width: 800px) {
+    section.about {
+        width: 80vw;
+    }
+}
