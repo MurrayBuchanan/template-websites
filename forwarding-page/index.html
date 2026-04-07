@@ -1,0 +1,87 @@
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Your Name</title>
+    <link rel="icon" type="image/x-icon" href="titleIcon.ico">
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+      :root {
+        --primary-color: #222;
+        --secondary-color: #3a3a3a;
+        --accent-color: #293791;
+      }
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      h1, h2, h3, p, a { font-family: "Outfit", sans-serif; }
+
+      .about {
+        width: 70%;
+        margin-top: 30vh;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      h2, h3 {
+        font-size: 1.2em;
+        color: var(--primary-color);
+      }
+      h2 {
+        line-height: 0em;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      h3 {
+        line-height: 0.6em;
+        margin-bottom: 2em;
+        font-weight: 300;
+      }
+
+      p.caption {
+        font-size: 1em;
+        line-height: 0.5em;
+        color: var(--secondary-color);
+      }
+
+      a, a:visited, a:active {
+        text-decoration: none;
+        color: var(--accent-color);
+        font-weight: 300;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      @media (orientation: portrait) {
+        .about {
+          width: 90%;
+        }
+      }
+
+      @media (min-width: 800px) {
+        .about {
+          width: 70%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+      <div class="about">
+        <h2>Your Name</h2>
+        <h3>Short description of yourself</h3>
+
+        <a href="https://murrayb.com" class="caption">Link to website</a>
+      </div>
+  </body>
+</html>
