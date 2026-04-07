@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --dark-primary: #FFFFFF;
+    --dark-secondary: #F2F2F2;
+    --dark-tertiary: #D2D2D7;
+    --dark-secondary-rgb: 255, 255, 255;
+    --accent: #0277ED;
+    --light-primary: #000000;
+    --light-secondary: #282828;
+}
+
+* {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+.load-section {
+	height: 80vh;
+    display: flex;
+	flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-primary);
+}
+
+
+.link-section a {
+    position: relative;
+    display: inline-block;
+}
+
+.link-section img {
+    opacity: 0.8;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    transform-origin: center;
+}
+
+.scroll-section {
+    text-align: center;
+    height: 15vh;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+    background-color: var(--dark-primary);
+}
+
+.scroll-section a {
+	color: lightslategrey;
+	font-weight:normal;
+}
+
+.vertical-gameplay {
+    max-width: 50%;
+}
+
+.scroll-section a:hover {
+	color: var(--light-primary);
+    text-decoration: none;
+}
+
+.link-section a img {
+	width: 30px;
+	height: 30px;
+	margin: 0 1em 0 1em;
+	fill: lightslategray;
+}
+
+.link-section img, .scroll-section a {
+    transition: transform 0.1s ease, opacity 0.1s ease;
+    transform-origin: center;
+}
+
+.link-section img:hover, .scroll-section a:hover {
+	transform: scale(1.2);
+	fill: white;
+}
+
+body {
+    background-color: var(--dark-secondary);
+}
+
+h1, h2, h3, h4, h5, p, a, ul, li {
+    font-family: "Outfit", sans-serif;
+    font-style: normal;
+}
+
+h1, h2, h3, p, ul, li {
+    color: var(--light-primary);
+}
+
+h1 {
+    font-size: 3em;
+    margin-top: 0.33em;
+    margin-bottom: 0.33em;
+    font-weight: 550;
+}
+
+h2 {
+    font-size: 2.4em;
+    margin-top: 0.33em;
+    margin-bottom: 0.33em;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.4em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+}
+
+h4 {
+    font-size: 1em;
+    font-weight: 400;
+}
+
+
+
+p, li{
+    color: var(--light-secondary);
+    font-size: 1em;
+    line-height: 1.4em;
+    margin-bottom: 0.67em;
+}
+
+p{
+    margin-top: 1em;
+}
+p.subtitle {
+    font-size: 1.2em;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.banner-lesson-img {
+    width: 150px;
+    height: auto;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+video {
+    border-radius: 1em;
+    width: 100%;
+    height: auto;
+}
+
+a:hover {
+    text-decoration:underline
+}
+
+button {
+    display: inline-block;
+    margin-top: 0.6em;
+    padding: 0.4em 1.4em;
+    background-color: var(--accent);
+    border: none;
+    font-size: 0.8em;
+    border-radius: 2em;
+    text-align: center;
+}
+
+.locked  {
+    background-color: #ff0800;
+}
+
+/* Hover effect */
+button:hover {
+    opacity: 0.9;
+}
+
+
+button a {
+    color: var(--dark-primary);
+}
+
+button a:hover {
+    text-decoration: none;
+}
+
+.horizontal-center {
+    text-align: center;
+}
+
+.inline p, .inline a {
+    display: inline;
+}
+
+.round, .description-section {
+    border-radius: 1em;
+}
+
+img[src="placeholder.png"] {
+    border-radius: 0.5em;
+}
+
+.primary-section {
+    background-color: var(--dark-primary);
+    padding-top: 6em;
+    padding-bottom: 6em;
+}
+
+.primary-section:first-of-type {
+    padding-bottom: 0em;
+}
+
+.secondary-section {
+    background-color: var(--dark-secondary);
+    margin-top: 6em;
+    margin-bottom: 6em;
+}
+
+.description-section {
+    background-color: var(--dark-primary);
+    padding: 1.2em 1.6em 1.6em 1.6em
+}
+
+.flex-section {
+    display: flex;
+    flex-direction: row;
+    flex: 8;
+}
+
+.flex-item {
+    flex: 50%;
+    padding: 0em 0 1em 0;
+}
+
+.flex-logo img {
+    width: 50px;
+    text-align: right;
+    margin-top: 1em;
+    margin-right: 1em;
+    align-content: baseline;
+}
+
+.flex-item:first-child {
+    padding-right: 1em;
+}
+
+.flex-item img {
+    text-align: center;
+}
+
+.line {
+	border-style: solid;
+	border-width: 0.25px;
+    border-color: var(--dark-tertiary);
+    margin-top: 6em;
+    margin-bottom: 6em;
+    opacity: 0.8;
+}
+
+footer .line {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+nav, footer, .primary-section, .secondary-section {
+    padding-right: 14em;
+    padding-left: 14em;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: rgba(var(--dark-secondary-rgb), 0.85);
+    backdrop-filter: blur(12px);
+    overflow: hidden;
+    border-bottom: 1px solid var(--dark-tertiary);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    height: 3em;
+}
+
+nav::after {
+    content: '';
+    flex-grow: 1;
+}
+
+nav a {
+    display: block;
+    color: var(--light-secondary);
+    text-align: center;
+    padding-right: 1.4em;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+
+.nav-title, h3 {
+    font-weight: 400;
+    font-size: 1.6em;
+    color: var(--light-primary)
+}
+  
+nav a {
+    color: var(--light-secondary)
+}
+
+nav a:hover {
+    color: var(--light-primary);
+}
+
+nav a:hover {
+    text-decoration: none;
+}
+
+footer {
+    background-color: var(--dark-secondary);
+    display: block;
+	bottom: 0;
+	left: 0;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    align-content: center;
+}
+  
+@media (max-width: 800px) {   
+    nav, footer, .primary-section, .secondary-section {
+        padding-left: 2em;
+        padding-right: 2em;
+    } 
+    .flex-section {
+        flex-direction: column;
+    }
+    .flex-item:first-child {
+        padding-right: 0;
+    }
+    h1 {
+        font-size: 2.4em;
+    }
+}
