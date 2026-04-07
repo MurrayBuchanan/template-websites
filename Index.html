@@ -1,8 +1,6 @@
 <html>
     <head>
-        <title>
-            Fergus Buchanan
-        </title>
+        <title>Your name</title>
 
         <link rel="icon" href="titleIcon" type="image/x-icon">
         <link rel="stylesheet" type="text/css" href="style.css">
@@ -10,25 +8,29 @@
 
     <body onload="init()">
         <section class="about">
-            <h2>FERGUS BUCHANAN</h2>
-            <h3>Computer Science, Student at <a href="https://www.st-andrews.ac.uk">University of St Andrews</a></h3>
+            <h2>Your name</h2>
+            <h3>Computer Science, Student at <a href=https://github.com/MurrayBuchanan>University of Github</a></h3>
 
-            <p class="caption">Currently based in Glasgow, Earth</p>
-            <p id="earth_time" class="overline">55.8652&deg; N, -4.2576&deg; E</p>
+            <p class="caption">Currently based Online, Earth</p>
+            <p id="earth_time" class="overline">55.8617&deg; N, -4.2583&deg; E</p>
         </section>
 
         <div class="bounce">
-            <h1>
-                Fergus <b>Buchanan</b>
-            </h1>
+            <h1>Your <b>Name</b></h1>
         </div>
 
         <script>
-            function daysSinceBirth() {
-                let today = new Date();
-                let dob = new Date(2001, 11 - 1, 5 + 1);
+            // Edit these three numbers (month: 1 = January … 12 = December)
+            const day = 1;
+            const month = 12;
+            const year = 1999;
 
-                return Math.ceil((today - dob) / 86400000);
+            const MS_PER_DAY = 1000 * 60 * 60 * 24;
+
+            function daysSinceBirth() {
+                const today = new Date();
+                const dob = new Date(year, month - 1, day);
+                return Math.ceil((today - dob) / MS_PER_DAY);
             }
 
             function init() {
